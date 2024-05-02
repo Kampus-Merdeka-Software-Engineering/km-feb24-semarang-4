@@ -1,0 +1,119 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #e9e8e8;
+}
+
+header {
+    font-family:Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0; /* Menempatkan header di bagian atas */
+    width: 100%; /* Header mengambil lebar penuh */
+    backdrop-filter: blur(10px); /* Efek blur pada latar belakang */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: #f9f9f9;
+	color: #1f1f1f;
+	padding: 10px;
+    text-align: center;
+    font-size: 75%;
+}
+
+h1 {
+	margin: 0;
+    animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+}
+
+
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;     
+}
+
+.zoom-in:active {
+    transform: scale(1.2);
+}
+
+.chart {
+	background-color: #fff;
+	border: none;
+	margin: 70px;
+	padding: 20px;
+	width: 400px;
+	text-align: center;
+    box-shadow: 5.41116px 18.2132px 41px rgba(0, 0, 0, 0.12), 3.18609px 10.7239px 21.3856px rgba(0, 0, 0, 0.086784), 1.63633px 5.50766px 10.0368px rgba(0, 0, 0, 0.067392), 0.657997px 2.21472px 4.3952px rgba(0, 0, 0, 0.052608), 0.147183px 0.495398px 1.9024px rgba(0, 0, 0, 0.033216);
+    animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+              transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.chart img {
+	max-width: 100%;
+}
+
+.chart h2 {
+	margin-top: 25px;
+	margin-bottom: 5px;
+	font-size: 25px;
+}
+
+/* .chart p {
+	margin: 0;
+	margin-top: 25px;
+	font-size: 45px;
+} */
+
+.chart:hover {
+	border-bottom-right-radius: 35px;
+	border-bottom-left-radius: 35px;
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+	transform: scale(1.05);
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.body{
+	display: block;
+  	justify-content: center;
+  	align-items: center;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+}
+.button a {
+	text-decoration: none;
+}
+.button button {
+	font-size: 15px;
+	margin: 10px;
+	padding: 10px;
+	width: 100px;
+	border-radius: 65px;
+	text-align: center;
+    animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	background: linear-gradient(143.2deg, #737373 8.12%, #202020 117.34%);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), 3px 4px 6px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+

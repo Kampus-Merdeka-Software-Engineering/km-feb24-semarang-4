@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DASHBOARD TEAM 4 SEMARANG</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/revouLogo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<!---Animate.css  --->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+</head>
+<body class="body">
+
+    <section class="header">
+        <div class="logo">
+            <i class="ri-menu-line menu"></i>
+            <h2><span>Team</span> 4</h2>
+        </div>
+        <div class="header--items">
+            <!-- <i class="ri-search-2-line"></i> -->
+            <div class="dark--theme--btn">
+                <i class="ri-moon-line moon"></i>
+                <i class="ri-sun-line sun"></i>
+            </div>
+            <!-- <i class="ri-notification-2-line"></i> -->
+            <i class="ri-wechat-2-line chat"></i>
+            <div class="profile">
+                <img src="assets/img/revouLogo.png" alt="Company Logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul class="sidebar--items">
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="ri-pie-chart-2-line"></i></span>
+                        <div class="sidebar--item">Visualization</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="ri-team-line"></i></span>
+                        <div class="sidebar--item">Team</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="ri-error-warning-line"></i></span>
+                        <div class="sidebar--item">About Visualization</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main--container">
+            <div class="section--title">
+                <h3 class="title">Hallo, Kamu</h3>
+            </div>
+            <div class="cards">
+                <div class="card card-1">
+                    <div class="card--title">
+                        <span class="card--icon icon"><i class="ri-money-dollar-circle-fill"></i></span>
+                        <span>Total Sales</span>
+                    </div>
+                    <h3 class="card--value">$18.331</h3>
+                </div>
+                <div class="card card-2">
+                    <div class="card--title">
+                        <span class="card--icon icon"><i class="ri-shopping-bag-2-line"></i></span>
+                        <span>Total Transaction</span>
+                    </div>
+                    <h3 class="card--value">9.350</h3>
+                </div>
+                <div class="card card-3">
+                    <div class="card--title">
+                        <span class="card--icon icon"><i class="ri-store-fill"></i></span>
+                        <span>Total Products</span>
+                    </div>
+                    <h3 class="card--value">176</h3>
+                </div>
+                <div class="filter">
+                    <span>Filter</span>
+                    <select name="product" id="product" placeholder="Pilih Produk">
+                        <option value="">-- Pilih Produk --</option>
+                        <option value="MonsterEnergy">Monster Energy</option>
+                        <option value="CocaCola">Coca Cola</option>
+                        <option value="RedBull">Red Bull</option>
+                        <option value="PolandSpringsWater">Poland Springs Water</option>
+                        <option value="KitKat">KitKat</option>
+                      </select>
+                    <select name="date" id="date">
+                        <option value="last7">Last 7 days</option>
+                        <option value="lastmonth">Last month</option>
+                        <option value="lastyear">Last year</option>
+                        <option value="alltime">All time</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

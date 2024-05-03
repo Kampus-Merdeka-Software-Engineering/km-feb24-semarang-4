@@ -277,3 +277,69 @@ a{
     cursor: pointer;
     background-color: transparent;
   }
+
+/* visualisasi baris 1 */
+
+.visualisasi{
+    width: auto;
+    background: var(--bg-color-first);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.bagan1{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bagan2{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bagan3{
+    display: flex;
+    gap: 20px;
+}
+
+.chart{
+    position: relative;
+    background-color: var(--bg-color-first);
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.chart-1{
+    background: var(--bg-color-fourth);
+    width: 70%;
+}
+
+.chart-2{
+    background: var(--bg-color-third);
+    width: 30%;
+}
+
+.chart-3{
+    background: var(--bg-color-third);
+    width: 30%;
+}
+
+.chart-4{
+    background: var(--bg-color-fourth);
+    width: 70%;
+}
+
+.chart-5{
+    background: var(--bg-color-fourth);
+    width: 70%;
+}
+
+.chart-6{
+    background: var(--bg-color-third);
+    width: 30%;
+}
+

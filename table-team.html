@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TABLE TEAM TEAM 4 SEMARANG</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style-table-team.css">
+    <link rel="icon" href="assets/img/revouLogo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<!---Animate.css  --->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+</head>
+<body class="body">
+
+    <section class="header">
+        <div class="logo">
+            <!-- <i class="ri-menu-line menu"></i> -->
+            <h2><span>TEAM 4 SEMARANG</span> </h2>
+        </div>
+        
+        <div class="header--items">
+            <!-- <i class="ri-search-2-line"></i> -->
+            <!-- <div class="dark--theme--btn">
+                <i class="ri-moon-line moon"></i>
+                <i class="ri-sun-line sun"></i>
+            </div>
+            <i class="ri-notification-2-line"></i>
+            <i class="ri-wechat-2-line chat"></i> -->
+            <div class="profile">
+                <img src="assets/img/revouLogo.png" alt="Company Logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <!-- SideBar -->
+        <div class="sidebar">
+            <ul class="sidebar--items">
+                <li>
+                    <a href="./index2.html">
+                        <span class="icon"><i class="ri-pie-chart-2-line"></i></span>
+                        <div class="sidebar--item">Visualization</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="ri-team-line"></i></span>
+                        <div class="sidebar--item">Table Team</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./about-dataset.html">
+                        <span class="icon"><i class="ri-table-line"></i></span>
+                        <div class="sidebar--item">About Dataset</div>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                        <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                        <div class="sidebar--item">Log Out</div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        
+        
+        
+<!-- CONTAINER -->
+        <div class="main--container">
+            <div class="section--title">
+                <h4 class="title">TABLE TEAM</h4>
+            </div>
+            <!-- Search -->
+            <div class="search--container">
+                <form class="search-form" action="#" method="GET">
+                    <input type="text" id="searchInput" placeholder="Cari...">
+                </form>
+            </div>
+            <br>
+            <!-- Table Team -->
+            <table class="team-table" id="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fikry</td>
+                        <td>Project Leader</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Fadli</td>
+                        <td>Front End Dev</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Andin</td>
+                        <td>Front End Dev</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Alif</td>
+                        <td>Front End Dev</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gita</td>
+                        <td>Front End Dev</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Feyza</td>
+                        <td>Deployment Team</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rahma</td>
+                        <td>Deployment Team</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Wildan</td>
+                        <td>Pitch Deck Team</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Alifa</td>
+                        <td>Pitch Deck Team</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Rafli</td>
+                        <td>Pitch Deck Team</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Feski</td>
+                        <td>Quality Assurance</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Elia</td>
+                        <td>Quality Assurance</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Ine</td>
+                        <td>Quality Assurance</td>
+                        <td></td>
+                    </tr>
+                    
+                    <!-- Tambahkan baris-baris data lainnya sesuai kebutuhan -->
+                </tbody>
+            </table>
+    </section>
+
+    <script>
+        // Get the search input and table elements
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('table');
+
+        // Add an event listener to the search input
+        searchInput.addEventListener('input', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+
+            // Loop through each row in the table
+            for (let i = 1; i < table.rows.length; i++) {
+                const row = table.rows[i];
+                const nameCell = row.cells[1];
+                const positionCell = row.cells[2];
+                const instagramCell = row.cells[3];
+
+                // Check if any cell in the row matches the search term
+                const nameMatch = nameCell.textContent.toLowerCase().includes(searchTerm);
+                const positionMatch = positionCell.textContent.toLowerCase().includes(searchTerm);
+                const instagramMatch = instagramCell.textContent.toLowerCase().includes(searchTerm);
+
+                // Show or hide the row based on the match
+                if (nameMatch || positionMatch || instagramMatch) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>

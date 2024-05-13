@@ -1,0 +1,278 @@
+/* Deklarasi untuk global style */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bg-color-first: #fff;
+    --bg-color-second: #e9edf1;
+    --bg-color-third: #3bc59a;
+    --bg-color-fourth: #cbee06;
+
+    --text-color-first: #0a0a0a;
+    --text-color-second: #3d3c3c;
+    --text-color-third: #3bc59a;
+    --text-color-fourth: #cbee06;
+
+    --hover-text-color: #fff;
+
+    --bg-card-1: #7026ed;
+    --bg-card-2: #7026ed;
+    --bg-card-3: #7026ed;
+
+    --more-and-less: #555;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
+    margin-left: 240px;
+    margin-right: 10px;
+    background: var(--bg-color-first);
+    color: var(--text-color-first);
+    width: auto; /* Add this line to make the header follow the container's width */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.logo h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.logo span {
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(to right, rgb(111, 0, 155), #fff 35%, #7026ed);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 4s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 75%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 70%;
+    }
+}
+
+.header--items {
+    display: flex;
+    align-items: center;
+}
+
+.header--items i {
+    font-size: 1.3rem;
+    margin-right: 25px;
+    cursor: pointer;
+    color: var(--text-color-first);
+}
+
+.header--items i:hover {
+    color: var(--text-color-fourth);
+}
+
+.dark--theme--btn {
+    display: flex;
+    align-items: center;
+}
+
+i.moon {
+    display: block;
+    color: var(--text-color-third);
+}
+
+.body.dark--mode .moon {
+    display: none;
+}
+
+i.sun {
+    color: #ecd765;
+    display: none;
+}
+
+.body.dark--mode .sun {
+    display: block;
+}
+
+.profile {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* main */
+
+.main {
+    position: relative;
+    height: calc(100vh - 70px);
+
+}
+
+/* CSS untuk form pencarian */
+.search--container {
+    margin-top: 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-right: 7px;
+}
+
+.search-form button {
+    padding: 8px 12px;
+    background-color: #662ac0;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #4a1a82;
+}
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed; /* Change this to 'fixed' to make the sidebar stick to the screen */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Change this to '100vh' to make the sidebar full height */
+    width: 230px;
+    padding: 20px;
+    margin-top: 0%;
+    background: var(--bg-color-first);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    transition: .3s;
+    background-image: url('../img/img-bg.jpg');
+}
+
+.sidebar--items li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar--items a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 35px;
+    color: var(--bg-color-first);
+}
+
+.sidebar--items a:hover {
+    background: #c198ff;
+    color: var(--text-color-first);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sidebar .icon {
+    margin-right: 20px;
+    font-size: 1.3rem;
+}
+
+
+/* main--container */
+
+.main--container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: calc(100% - 230px);
+    padding: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--bg-color-second);
+    z-index: 2;
+}
+
+.section--title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--more-and-less);
+}
+
+
+/* style tabel */
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.team-table th,
+.team-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.team-table th {
+    background-color: #662ac0;
+    color: #fff;
+}
+
+.team-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

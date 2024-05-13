@@ -1,0 +1,240 @@
+/* Deklarasi untuk global style */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bg-color-first: #fff;
+    --bg-color-second: #e9edf1;
+    --bg-color-third: #3bc59a;
+    --bg-color-fourth: #cbee06;
+
+    --text-color-first: #0a0a0a;
+    --text-color-second: #3d3c3c;
+    --text-color-third: #3bc59a;
+    --text-color-fourth: #cbee06;
+
+    --hover-text-color: #fff;
+
+    --bg-card-1: #7026ed;
+    --bg-card-2: #7026ed;
+    --bg-card-3: #7026ed;
+
+    --more-and-less: #555;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
+    margin-left: 240px;
+    margin-right: 10px;
+    background: var(--bg-color-first);
+    color: var(--text-color-first);
+    width: auto; /* Add this line to make the header follow the container's width */
+  }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.logo h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.logo span {
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(to right, rgb(111, 0, 155), #fff 35%, #e00a95);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 75%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 70%;
+    }
+}
+
+.header--items {
+    display: flex;
+    align-items: center;
+}
+
+.header--items i {
+    font-size: 1.3rem;
+    margin-right: 25px;
+    cursor: pointer;
+    color: var(--text-color-first);
+}
+
+.header--items i:hover {
+    color: var(--text-color-fourth);
+}
+
+.dark--theme--btn {
+    display: flex;
+    align-items: center;
+}
+
+i.moon {
+    display: block;
+    color: var(--text-color-third);
+}
+
+.body.dark--mode .moon {
+    display: none;
+}
+
+i.sun {
+    color: #ecd765;
+    display: none;
+}
+
+.body.dark--mode .sun {
+    display: block;
+}
+
+.profile {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* main */
+
+.main {
+    position: relative;
+    height: calc(100vh - 70px);
+
+}
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed; /* Change this to 'fixed' to make the sidebar stick to the screen */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Change this to '100vh' to make the sidebar full height */
+    width: 230px;
+    padding: 20px;
+    margin-top: 0%;
+    background: var(--bg-color-first);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    transition: .3s;
+    background-image: url('../img/img-bg.jpg');
+  }
+  
+
+.sidebar--items li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar--items a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 35px;
+    color: var(--bg-color-first);
+}
+
+.sidebar--items a:hover {
+    background: #c198ff;
+    color: var(--text-color-first);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sidebar .icon {
+    margin-right: 20px;
+    font-size: 1.3rem;
+}
+
+/* main--container */
+
+.main--container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: calc(100% - 230px);
+    padding: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--bg-color-second);
+    z-index: 2;
+  }
+
+.section--title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: var(--more-and-less);
+}
+
+
+.content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 14px;
+    box-shadow: 5.41116px 18.2132px 41px rgba(0, 0, 0, 0.12), 3.18609px 10.7239px 21.3856px rgba(0, 0, 0, 0.086784), 1.63633px 5.50766px 10.0368px rgba(0, 0, 0, 0.067392), 0.657997px 2.21472px 4.3952px rgba(0, 0, 0, 0.052608), 0.147183px 0.495398px 1.9024px rgba(0, 0, 0, 0.033216);
+}
+
+ol {
+    margin-left: 17px;
+}

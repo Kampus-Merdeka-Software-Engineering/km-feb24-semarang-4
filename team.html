@@ -1,71 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>TABLE TEAM TEAM 4 SEMARANG</title>
-	<link rel="stylesheet" type="text/css" href="./assets/css/style-table-team.css">
-    <link rel="icon" href="assets/img/revouLogo.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<!---Animate.css  --->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
-</head>
-<body class="body">
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Team 4 | SEMARANG</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style-table-team.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  
 
-    <section class="header">
-        <div class="logo">
-            <!-- <i class="ri-menu-line menu"></i> -->
-            <h2><span>TEAM 4 SEMARANG</span> </h2>
-        </div>
-        
-        <div class="header--items">
-            <!-- <i class="ri-search-2-line"></i> -->
-            <!-- <div class="dark--theme--btn">
-                <i class="ri-moon-line moon"></i>
-                <i class="ri-sun-line sun"></i>
-            </div>
-            <i class="ri-notification-2-line"></i>
-            <i class="ri-wechat-2-line chat"></i> -->
-            <div class="profile">
-                <img src="assets/img/revouLogo.png" alt="Company Logo">
-            </div>
-        </div>
-    </section>
-
-    <section class="main">
-        <!-- SideBar -->
-        <div class="sidebar">
-            <ul class="sidebar--items">
-                <li>
-                    <a href="./index2.html">
-                        <span class="icon"><i class="ri-pie-chart-2-line"></i></span>
-                        <div class="sidebar--item">Visualization</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="icon"><i class="ri-team-line"></i></span>
-                        <div class="sidebar--item">Table Team</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="./about-dataset.html">
-                        <span class="icon"><i class="ri-table-line"></i></span>
-                        <div class="sidebar--item">About Dataset</div>
-                    </a>
-                </li>
-                <!-- <li>
-                    <a href="">
-                        <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
-                        <div class="sidebar--item">Log Out</div>
-                    </a>
-                </li> -->
-            </ul>
-        </div>
-        
-        
-        
-<!-- CONTAINER -->
-        <div class="main--container">
+  <body>
+    <section class="row-column">
+      <div class="row">
+        <div class="column">
+		<div class="main--container--table">
             <div class="section--title">
                 <h4 class="title">TABLE TEAM</h4>
             </div>
@@ -83,7 +38,7 @@
                         <th>No.</th>
                         <th>Name</th>
                         <th>Position</th>
-                        <th>Foto</th>
+                        <th>Instagram</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -166,9 +121,11 @@
                         <td></td>
                     </tr>
                     
-                    <!-- Tambahkan baris-baris data lainnya sesuai kebutuhan -->
+                   
                 </tbody>
             </table>
+            </div>
+            </div>
     </section>
 
     <script>
@@ -201,6 +158,57 @@
             }
         });
     </script>
-    
-</body>
+
+    </section>
+
+
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name">TEAM 4</span>
+        </div>
+
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="./index3.html" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">Dashboard</span>
+                
+              </a>
+            </li>
+            <li class="list">
+              <a href="./team.html" class="nav-link">
+                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                <span class="link">Team</span>
+                
+              </a>
+           
+            
+          <div class="bottom-cotent">
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-cog icon"></i>
+                <span class="link">About DataSet</span>
+                <a href="./dataset.html"></a>
+              </a>
+            </li>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+
+   
+
+    <section class="overlay"></section>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+  
+  
 </html>

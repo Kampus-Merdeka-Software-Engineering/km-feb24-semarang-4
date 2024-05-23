@@ -1,0 +1,210 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Deklarasi untuk global style */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --bg-color-first: #1E202F;
+  --bg-color-second: #292A3E;
+  --bg-color-third: #3bc59a;
+  --bg-color-fourth: #cbee06;
+
+  --text-color-first: #0a0a0a;
+  --text-color-second: #3d3c3c;
+  --text-color-third: #3bc59a;
+  --text-color-fourth: #cbee06;
+
+  --hover-text-color: #fff;
+
+  --more-and-less: #555;
+
+  /* Darkmode */
+  --bg-main: #1E202F;
+  --bg-card: #292A3E;
+  --bg-btn-bfr: #A236D0;
+  --bg-btn-aft: #7B13A7;
+  --text-color: #d1d1d1;
+}
+
+/* Global styles */
+body {
+  min-height: 100%;
+  background: #1E202F;
+}
+
+/* Header */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-card);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+
+.logo .menu-icon {
+  color: #aaaaaa;
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.logo .logo-name {
+  color: var(--bg-btn-aft);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 260px;
+  padding: 20px 0;
+  background-color: var(--bg-card);
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+nav.open .sidebar {
+  left: 0;
+}
+
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+
+.sidebar-content .list {
+  list-style: none;
+}
+
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 10px 8px; /* Adjusted padding */
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.lists .nav-link:hover {
+  background-color: var(--bg-btn-bfr);
+  border-radius: 35px;
+}
+
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+
+.nav-link .link {
+  font-size: 16px;
+  color: #9b9b9b;
+  font-weight: 400;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 260px;
+  pointer-events: auto;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin-top: 70px;
+}
+
+/* .main--container {
+  position: absolute;
+  margin-top: 70px;
+  top: 0;
+  right: 0;
+  width: calc(100% - 260px);
+  height: 100%;
+  padding: 30px;
+  background-color: var(--bg-main);
+  overflow-y: scroll;
+} */
+
+.main--container {
+    position: absolute;
+    margin-top: 70px;
+    top: 0;
+    right: 0;
+    height: 700px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--bg-main) ;
+  }
+  
+.hero .main--container {
+    top: 0;
+    margin-top: 70px;
+    height: 100%;
+    /* right: 150px; */
+    width: auto;
+    padding: 30px;
+}
+
+.section--title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.content{
+    background-color: #A236D0;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+ol{
+    margin-left: 12px;
+}

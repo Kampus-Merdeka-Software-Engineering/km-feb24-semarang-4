@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
 
 <head>
@@ -11,6 +10,8 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <!-- Boxicons CSS -->
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 
 
@@ -68,21 +69,25 @@
 
           <div class="cards2">
             <div class="chart">
+              <button id="sortAsc">Ascending</button>
+              <button id="sortDesc">Descending</button>
               <canvas id="barchart"></canvas>
             </div>
             <div class="chart">
-              <canvas id="doughnut"></canvas>
+              <canvas id="piechart"></canvas>
             </div>
             <div class="chart">
-              <canvas id="pie"></canvas>
+              <canvas id="machinePieChart"></canvas>
             </div>
             <div class="chart">
-              <canvas id="line"></canvas>
+              <canvas id="linechart"></canvas>
             </div>
             <div class="chart">
-              <canvas id="polarArea"></canvas>
+              <canvas id="paymentMethodPieChart"></canvas>
             </div>
             <div class="chart">
+              <button id="asc6">Sort Ascending</button>
+              <button id="desc6">Sort Descending</button>
               <canvas id="bar"></canvas>
             </div>
           </div>
@@ -112,13 +117,13 @@
             </div>
           </div> -->
 
-          <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-          <script src="./assets/js/chart1.js"></script>
-          <script src="./assets/js/chart2.js"></script>
-          <script src="./assets/js/chart3.js"></script>
-          <script src="./assets/js/chart4.js"></script>
-          <script src="./assets/js/chart5.js"></script>
-          <script src="./assets/js/chart6.js"></script>
+          <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script> -->
+          <script src="./assets/js/chart1.js" type="module"></script>
+          <script src="./assets/js/chart2.js" type="module"></script>
+          <script src="./assets/js/chart3.js" type="module"></script>
+          <script src="./assets/js/chart4.js" type="module"></script>
+          <script src="./assets/js/chart5.js" type="module"></script>
+          <script src="./assets/js/chart6.js" type="module"></script>
 
         </div>
       </div>

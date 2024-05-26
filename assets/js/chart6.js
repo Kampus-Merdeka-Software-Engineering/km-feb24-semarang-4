@@ -1,37 +1,61 @@
-const ctx6 = document.getElementById("bar").getContext("2d");
-const bar = new Chart(ctx6, {
-  type: "bar",
-  data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    datasets: [
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-          "rgba(255, 159, 64, 1)",
-        ],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
+import TopProduct from "../Json/TopProduct.json" assert {type: "json"};
+
+console.log(TopProduct);
+
+function createChart(data) {
+  const ctx = document.getElementById("bar").getContext("2d");
+  return new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: data.map(item => item.Product),
+      datasets: [
+        {
+          label: 'Total Sales',
+          data: data.map(item => parseFloat(item.total_sales)),
+          backgroundColor: "yellow",
+          borderColor: "black",
+          borderWidth: 1.5
+        }
+      ]
     },
-  },
-});
+    options: {
+      indexAxis: 'y', // Menampilkan chart secara horizontal
+      scales: {
+        x: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+// Mengonversi dan mengurutkan data berdasarkan total_sales
+let sortedData = TopProduct.map(item => ({
+  Product: item.Product,
+  total_sales: parseFloat(item.total_sales)
+}));
+
+// Ambil 5 produk dengan total sales tertinggi
+sortedData.sort((a, b) => b.total_sales - a.total_sales);
+let top5Data = sortedData.slice(0, 5);
+
+// Buat chart pertama kali
+let barChart = createChart(top5Data);
+
+function updateChart(order) {
+  // Urutkan data berdasarkan total_sales
+  if (order === 'asc') {
+    top5Data.sort((a, b) => a.total_sales - b.total_sales);
+  } else {
+    top5Data.sort((a, b) => b.total_sales - a.total_sales);
+  }
+
+  // Update chart data
+  barChart.data.labels = top5Data.map(item => item.Product);
+  barChart.data.datasets[0].data = top5Data.map(item => item.total_sales);
+  barChart.update();
+}
+
+// Event listeners for buttons
+document.getElementById("asc6").addEventListener("click", () => updateChart('asc'));
+document.getElementById("desc6").addEventListener("click", () => updateChart('desc'));

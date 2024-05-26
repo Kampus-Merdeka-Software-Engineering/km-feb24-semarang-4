@@ -1,0 +1,31 @@
+[{
+  "Product": "Monster Energy Original",
+  "total_sales": "1552.0"
+}, {
+  "Product": "Coca Cola - Zero Sugar",
+  "total_sales": "987.0"
+}, {
+  "Product": "Red Bull - Original",
+  "total_sales": "812.0"
+}, {
+  "Product": "Poland Springs Water",
+  "total_sales": "702.5"
+}, {
+  "Product": "KitKat - Crisp Wafers",
+  "total_sales": "590.5"
+}, {
+  "Product": "Coca Cola - Regular",
+  "total_sales": "550.5"
+}, {
+  "Product": "Starbucks Doubleshot Energy - Mocha",
+  "total_sales": "470.5"
+}, {
+  "Product": "Wonderful Pistachios - Variety",
+  "total_sales": "392.0"
+}, {
+  "Product": "Sunkist Soda - Orange",
+  "total_sales": "381.5"
+}, {
+  "Product": "SunChips Multigrain - Harvest Cheddar",
+  "total_sales": "352.5"
+}]

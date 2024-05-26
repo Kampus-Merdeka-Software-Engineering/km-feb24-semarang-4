@@ -296,7 +296,7 @@ nav.open ~ .overlay {
 
 .chart {
   flex: 1 1 30%; /* Setiap chart akan mengambil setidaknya 45% dari lebar kontainer */
-  max-width: 300px; /* Lebar maksimum untuk setiap chart */
+  max-width: 100%; /* Lebar maksimum untuk setiap chart */
   margin: 10px;
   box-sizing: border-box;
 }

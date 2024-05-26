@@ -1,37 +1,49 @@
-const ctx5 = document.getElementById("polarArea").getContext("2d");
-const polarArea = new Chart(ctx5, {
-  type: "polarArea",
+import PaymentMethodPercentage from "../Json/PaymentMethodPercentage.json" assert {type: "json"};
+
+// Mengonversi data JSON ke format yang sesuai untuk pie chart
+const paymentMethods = PaymentMethodPercentage.map(item => item.type);
+const totalSales = PaymentMethodPercentage.map(item => parseFloat(item.Total_Sales));
+
+// Fungsi untuk mendapatkan warna acak
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Membuat array warna untuk setiap metode pembayaran
+const backgroundColors = paymentMethods.map(() => getRandomColor());
+
+const ctx = document.getElementById("paymentMethodPieChart").getContext("2d");
+const pieChart = new Chart(ctx, {
+  type: "pie",
   data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    datasets: [
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-          "rgba(255, 159, 64, 1)",
-        ],
-        borderWidth: 1,
-      },
-    ],
+    labels: paymentMethods,
+    datasets: [{
+      data: totalSales,
+      backgroundColor: backgroundColors,
+      borderColor: backgroundColors,
+      borderWidth: 1
+    }]
   },
   options: {
-    scales: {
-      y: {
-        beginAtZero: true,
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
       },
-    },
-  },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            const label = context.label || '';
+            const value = context.raw || 0;
+            return `${label}: ${value.toLocaleString()}`
+          }
+        }
+      }
+    }
+  }
 });

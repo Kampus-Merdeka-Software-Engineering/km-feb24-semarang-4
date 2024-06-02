@@ -1,61 +1,81 @@
+import SixMonthProduct from "../Json/SixMonthProduct.json" assert {type: "json"};
 import TopProduct from "../Json/TopProduct.json" assert {type: "json"};
 
-console.log(TopProduct);
-
-function createChart(data) {
-  const ctx = document.getElementById("bar").getContext("2d");
-  return new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: data.map(item => item.Product),
-      datasets: [
-        {
-          label: 'Total Sales',
-          data: data.map(item => parseFloat(item.total_sales)),
-          backgroundColor: "yellow",
-          borderColor: "black",
-          borderWidth: 1.5
-        }
-      ]
-    },
-    options: {
-      indexAxis: 'y', // Menampilkan chart secara horizontal
-      scales: {
-        x: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-}
-
-// Mengonversi dan mengurutkan data berdasarkan total_sales
-let sortedData = TopProduct.map(item => ({
+const allTimeData = TopProduct.map(item => ({
   Product: item.Product,
   total_sales: parseFloat(item.total_sales)
 }));
 
-// Ambil 5 produk dengan total sales tertinggi
-sortedData.sort((a, b) => b.total_sales - a.total_sales);
-let top5Data = sortedData.slice(0, 5);
+const sixMonthData = SixMonthProduct.map(item => ({
+  Product: item.Product,
+  total_sales: parseFloat(item.total_sales)
+}));
 
-// Buat chart pertama kali
-let barChart = createChart(top5Data);
+let allTimeCurrentData = allTimeData.slice(0, 5); // Ambil lima produk teratas dari data semua waktu
+let sixMonthCurrentData = sixMonthData.slice(0, 5); // Ambil lima produk teratas dari data enam bulan
 
-function updateChart(order) {
-  // Urutkan data berdasarkan total_sales
-  if (order === 'asc') {
-    top5Data.sort((a, b) => a.total_sales - b.total_sales);
-  } else {
-    top5Data.sort((a, b) => b.total_sales - a.total_sales);
+let currentData = allTimeCurrentData; // Data yang sedang ditampilkan saat ini
+
+const ctx = document.getElementById("bar").getContext("2d");
+
+let barChart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: currentData.map(item => item.Product),
+    datasets: [
+      {
+        label: 'Total Sales',
+        data: currentData.map(item => item.total_sales),
+        backgroundColor: "yellow",
+        borderColor: "black",
+        borderWidth: 1.5
+      }
+    ]
+  },
+  options: {
+    indexAxis: 'y',
+    scales: {
+      x: {
+        beginAtZero: true
+      }
+    }
   }
+});
 
-  // Update chart data
-  barChart.data.labels = top5Data.map(item => item.Product);
-  barChart.data.datasets[0].data = top5Data.map(item => item.total_sales);
+// Fungsi untuk memperbarui chart dengan data yang diberikan
+function updateChart(data) {
+  barChart.data.labels = data.map(item => item.Product);
+  barChart.data.datasets[0].data = data.map(item => item.total_sales);
   barChart.update();
 }
 
-// Event listeners for buttons
-document.getElementById("asc6").addEventListener("click", () => updateChart('asc'));
-document.getElementById("desc6").addEventListener("click", () => updateChart('desc'));
+// Fungsi untuk mengurutkan data secara ascending atau descending
+function sortData(order) {
+  if (order === 'asc') {
+    currentData.sort((a, b) => a.total_sales - b.total_sales);
+  } else {
+    currentData.sort((a, b) => b.total_sales - a.total_sales);
+  }
+  updateChart(currentData);
+}
+
+// Panggil fungsi untuk memperbarui chart saat halaman dimuat
+updateChart(allTimeCurrentData);
+
+// Event listener untuk dropdown
+document.getElementById("Filter-Barchart").addEventListener("change", (event) => {
+  const selectedCategory = event.target.value;
+  if (selectedCategory === "allproduct") {
+    currentData = allTimeCurrentData; // Set data yang sedang ditampilkan menjadi data all time
+    updateChart(allTimeCurrentData); // Memuat lima produk teratas dari data semua waktu
+  } else if (selectedCategory === "sixmonthproduct") {
+    currentData = sixMonthCurrentData; // Set data yang sedang ditampilkan menjadi data enam bulan
+    updateChart(sixMonthCurrentData); // Memuat lima produk teratas dari data enam bulan
+  }
+});
+
+// Event listener untuk ascending button
+document.getElementById("asc6").addEventListener("click", () => sortData('asc'));
+
+// Event listener untuk descending button
+document.getElementById("desc6").addEventListener("click", () => sortData('desc'));

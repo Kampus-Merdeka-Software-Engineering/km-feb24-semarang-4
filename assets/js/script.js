@@ -147,3 +147,29 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
+/*--------TABLE DATA--------*/
+
+// Memuat data JSON
+var xmlhttp = new XMLHttpRequest();
+var url = "js/data.json"; // Nama file JSON
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+var data = [];
+var filteredData = [];
+var currentPage = 1;
+var rowsPerPage = 50;
+
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    data = JSON.parse(this.responseText);
+    filteredData = data;
+    console.log("Data berhasil dimuat: ", data);
+    displayTableData(currentPage);
+    updateButtons();
+  } else if (this.readyState == 4) {
+    console.log("Gagal memuat data: ", this.status, this.statusText);
+  }
+};

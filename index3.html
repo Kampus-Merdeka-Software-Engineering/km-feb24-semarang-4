@@ -22,42 +22,35 @@
             <h4 class="title">DASHBOARD</h4>
           </div>
           <div class="cards">
-            <!-- <div class="filter">
-              <span>Filter</span>
-              <select name="product" id="product" placeholder="Pilih Produk">
-                <option value="">~ Pilih Produk ~</option>
-                <option value="MonsterEnergy">Monster Energy</option>
-                <option value="CocaCola">Coca Cola</option>
-                <option value="RedBull">Red Bull</option>
-                <option value="PolandSpringsWater">Poland Springs Water</option>
-                <option value="KitKat">KitKat</option>
-              </select>
-              <select name="date" id="date">
-                <option value="alltime">All time</option>
-                <option value="sixmonth">6 month ago</option>
-              </select>
-            </div> -->
             <div class="card card-1">
               <div class="card--title">
                 <span class="card--icon icon"><i class="ri-money-dollar-circle-fill"></i></span>
                 <span>Total Sales</span>
               </div>
-              <h3 class="card--value">$18.331</h3>
+              <h3 class="card--value" id="totalLineTotal"></h3>
             </div>
             <div class="card card-2">
               <div class="card--title">
                 <span class="card--icon icon"><i class="ri-shopping-bag-2-line"></i></span>
                 <span>Total Transaction</span>
               </div>
-              <h3 class="card--value">9.350</h3>
+              <h3 class="card--value" id="totalTransactions"></h3>
             </div>
             <div class="card card-3">
               <div class="card--title">
                 <span class="card--icon icon"><i class="ri-store-fill"></i></span>
                 <span>Total Products</span>
               </div>
-              <h3 class="card--value">176</h3>
+              <h3 class="card--value" id="totalProducts"></h3>
             </div>
+          </div>
+
+          <div class="filter">
+            <span>Filter</span>
+            <select id="categoryFilter" class="categoryFilter">
+              <option value="alltime">All time</option>
+              <option value="sixmonth">6 month ago</option>
+            </select>
           </div>
 
           <!-- visualisasi -->
@@ -66,10 +59,6 @@
             <div class="chart">
               <button id="sortAsc">Ascending</button>
               <button id="sortDesc">Descending</button>
-              <select id="categoryFilter" class="categoryFilter">
-                <option value="alltime">All Time</option>
-                <option value="sixmonth">6 Month</option>
-              </select>
               <canvas id="barchart"></canvas>
             </div>
 
@@ -80,10 +69,6 @@
             <div class="chart">
               <button id="asc6">Sort Ascending</button>
               <button id="desc6">Sort Descending</button>
-              <select id="Filter-Barchart" class="categoryFilter">
-                <option value="allproduct">All Time</option>
-                <option value="sixmonthproduct">6 Month</option>
-              </select>
               <canvas id="bar"></canvas>
             </div>
 
@@ -98,8 +83,35 @@
             <div class="chart">
               <canvas id="piechart"></canvas>
             </div>
-            
+
           </div>
+          <br>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-item">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum
+                  mauris. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at
+                  eros.</p>
+              </div>
+              <div class="footer-item">
+                <h3>Contact</h3>
+                <ul>
+                  <li><i class="bx bx-phone"></i> +62 812 3456 7890</li>
+                  <li><i class="bx bx-mail-send"></i> team4@gmail.com</li>
+                </ul>
+              </div>
+              <div class="footer-item">
+                <h3>Social Media</h3>
+                <ul>
+                  <li><a href="#"><i class="bx bxl-facebook"></i> Facebook</a></li>
+                  <li><a href="#"><i class="bx bxl-instagram"></i> Instagram</a></li>
+                  <li><a href="#"><i class="bx bxl-twitter"></i> Twitter</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
 
           <script src="./assets/js/chart1.js" type="module"></script>
           <script src="./assets/js/chart2.js" type="module"></script>
@@ -107,6 +119,7 @@
           <script src="./assets/js/chart4.js" type="module"></script>
           <script src="./assets/js/chart5.js" type="module"></script>
           <script src="./assets/js/chart6.js" type="module"></script>
+          <script src="./assets/js/dataCard.js" type="module"></script>
         </div>
       </div>
     </div>
@@ -149,6 +162,7 @@
   </nav>
 
   <section class="overlay"></section>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>

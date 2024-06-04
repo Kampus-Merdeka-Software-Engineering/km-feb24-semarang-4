@@ -63,12 +63,12 @@ function sortData(order) {
 updateChart(allTimeCurrentData);
 
 // Event listener untuk dropdown
-document.getElementById("Filter-Barchart").addEventListener("change", (event) => {
+document.getElementById("categoryFilter").addEventListener("change", (event) => {
   const selectedCategory = event.target.value;
-  if (selectedCategory === "allproduct") {
+  if (selectedCategory === "alltime") {
     currentData = allTimeCurrentData; // Set data yang sedang ditampilkan menjadi data all time
     updateChart(allTimeCurrentData); // Memuat lima produk teratas dari data semua waktu
-  } else if (selectedCategory === "sixmonthproduct") {
+  } else if (selectedCategory === "sixmonth") {
     currentData = sixMonthCurrentData; // Set data yang sedang ditampilkan menjadi data enam bulan
     updateChart(sixMonthCurrentData); // Memuat lima produk teratas dari data enam bulan
   }

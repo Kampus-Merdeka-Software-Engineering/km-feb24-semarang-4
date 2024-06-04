@@ -12,8 +12,8 @@
 }
 
 :root {
-  --bg-color-first: #1E202F;
-  --bg-color-second: #292A3E;
+  --bg-color-first: #1e202f;
+  --bg-color-second: #292a3e;
   --bg-color-third: #3bc59a;
   --bg-color-fourth: #cbee06;
 
@@ -27,14 +27,15 @@
   --more-and-less: #555;
 
   /* Darkmode */
-  --bg-main: #1E202F;
-  --bg-card: #292A3E;
-  --bg-btn-bfr: #A236D0;
-  --bg-btn-aft: #7B13A7;
+  --bg-main: #1e202f;
+  --bg-card: #292a3e;
+  --bg-btn-bfr: #a236d0;
+  --bg-btn-aft: #7b13a7;
   --text-color: #d1d1d1;
 }
 
 * {
+  color: #1900ff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -72,7 +73,7 @@ nav .logo {
 }
 
 .logo .logo-name {
-  color: #333;
+  color: #c0ff00;
   font-size: 22px;
   font-weight: 500;
 }
@@ -268,10 +269,10 @@ nav.open ~ .overlay {
 .card-3 {
   background: var(--bg-card);
   box-shadow: 5.41116px 18.2132px 41px rgba(0, 0, 0, 0.12),
-              3.18609px 10.7239px 21.3856px rgba(0, 0, 0, 0.086784),
-              1.63633px 5.50766px 10.0368px rgba(0, 0, 0, 0.067392),
-              0.657997px 2.21472px 4.3952px rgba(0, 0, 0, 0.052608),
-              0.147183px 0.495398px 1.9024px rgba(0, 0, 0, 0.033216);
+    3.18609px 10.7239px 21.3856px rgba(0, 0, 0, 0.086784),
+    1.63633px 5.50766px 10.0368px rgba(0, 0, 0, 0.067392),
+    0.657997px 2.21472px 4.3952px rgba(0, 0, 0, 0.052608),
+    0.147183px 0.495398px 1.9024px rgba(0, 0, 0, 0.033216);
 }
 
 /* visualisasi baris 1 */
@@ -313,6 +314,29 @@ nav.open ~ .overlay {
   justify-content: space-between;
   margin-bottom: 10px;
   color: var(--text-color);
+}
+
+/* DATA TABLE */
+.section-table {
+  width: 100%;
+  padding: 2%;
+  padding-top: 100px;
+  background-color: #292a3e;
+}
+.table-data {
+  width: 100%;
+  background-color: #c0ff00;
+  padding: 20px;
+  padding-top: 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+@media screen and (max-width: 70px) {
+  .table-data {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin: 5px;
+  }
 }
 
 /* Clear floats after the columns */

@@ -15,150 +15,100 @@
     />
   </head>
   
-
   <body>
-    <section class="row-column">
-      <div class="row">
-        <div class="column">
-		<div class="main--container--table">
-            <div class="section--title">
-                <h4 class="title">TABLE TEAM</h4>
-            </div>
-            <!-- Search -->
-            <div class="search--container">
-                <form class="search-form" action="#" method="GET">
-                    <input type="text" id="searchInput" placeholder="Cari...">
-                </form>
-            </div>
-            <br>
-            <!-- Table Team -->
-            <table class="team-table" id="table">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Instagram</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Fikry</td>
-                        <td>Project Leader</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Fadli</td>
-                        <td>Front End Dev</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Andin</td>
-                        <td>Front End Dev</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Allif</td>
-                        <td>Front End Dev</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Gita</td>
-                        <td>Front End Dev</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Feyza</td>
-                        <td>Deployment Team</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Rahma</td>
-                        <td>Deployment Team</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Wildan</td>
-                        <td>Pitch Deck Team</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Alifa</td>
-                        <td>Pitch Deck Team</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Rafli</td>
-                        <td>Pitch Deck Team</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Feski</td>
-                        <td>Quality Assurance</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Elia</td>
-                        <td>Quality Assurance</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Ine</td>
-                        <td>Quality Assurance</td>
-                        <td></td>
-                    </tr>
-                    
-                   
-                </tbody>
-            </table>
-            </div>
-            </div>
-    </section>
+    <section class="team">
+      <div class="center">
+        <h1>Our Team</h1>
+      </div>
+  
+      <div class="team-content">
+        <div class="box">
+          <img src="assets/img/FIKRY.png">
+          <h3>Fikry Destryanto</h3>
+          <h5>Project Leader</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/ALIF.png">
+          <h3>Allif Rizki Abdillah</h3>
+          <h5>Front End Engineer</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/FADLI.png">
+          <h3>Muhammad Fadli Isyarqi</h3>
+          <h5>Front End Engineer</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/ANDIEN.png">
+          <h3>Andiena Amalia</h3>
+          <h5>Front End Engineer</h5>
+        </div>
 
-    <script>
-        // Get the search input and table elements
-        const searchInput = document.getElementById('searchInput');
-        const table = document.getElementById('table');
+      </div>
 
-        // Add an event listener to the search input
-        searchInput.addEventListener('input', (event) => {
-            const searchTerm = event.target.value.toLowerCase();
+      <div class="team-content">
+        <div class="box">
+          <img src="assets/img/GITA.png">
+          <h3>Gita Iftah Royani</h3>
+          <h5>Front End Engineer</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/FEYZA.png">
+          <h3>Feyza Putri Aulia Pratami</h3>
+          <h5>Deployment Team</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/RAHMA.png">
+          <h3>Lilis Syahvira Rahmadhani</h3>
+          <h5>Deployment Team</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/WILDAN.png">
+          <h3>Wildan Firdaus</h3>
+          <h5>Pitch Deck Team</h5>
+        </div>
+      </div>
 
-            // Loop through each row in the table
-            for (let i = 1; i < table.rows.length; i++) {
-                const row = table.rows[i];
-                const nameCell = row.cells[1];
-                const positionCell = row.cells[2];
-                const instagramCell = row.cells[3];
+      <div class="team-content">
+        <div class="box">
+          <img src="assets/img/ALIFA.png">
+          <h3>Alifa Baiduri Hayatunnufus</h3>
+          <h5>Pitch Deck Team</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/RAFLY.png">
+          <h3>Muhammad Rafli Ragil Adi Putra</h3>
+          <h5>Pitch-Deck</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/FESKI.png">
+          <h3>Feski Handika Putra</h3>
+          <h5>Quality Assurance</h5>
+        </div>
+  
+        <div class="box">
+          <img src="assets/img/ELIA.png">
+          <h3>Elia Nugraheni</h3>
+          <h5>Quality Assurance</h5>
+        </div>
+      </div>
+    
+      <div class="team-content">
+        <div class="box">
+          <img src="assets/img/INE.png">
+          <h3>Ine Clarita Cahya</h3>
+          <h5>Quality Assurance</h5>
+        </div>
+      </div>
 
-                // Check if any cell in the row matches the search term
-                const nameMatch = nameCell.textContent.toLowerCase().includes(searchTerm);
-                const positionMatch = positionCell.textContent.toLowerCase().includes(searchTerm);
-                const instagramMatch = instagramCell.textContent.toLowerCase().includes(searchTerm);
-
-                // Show or hide the row based on the match
-                if (nameMatch || positionMatch || instagramMatch) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            }
-        });
-    </script>
-
+      </div>
     </section>
 
 
@@ -202,11 +152,11 @@
       </div>
     </nav>
 
-   
 
     <section class="overlay"></section>
 
     <script src="assets/js/script.js"></script>
+
   </body>
   
   

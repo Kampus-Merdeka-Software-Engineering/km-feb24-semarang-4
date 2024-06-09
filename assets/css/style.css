@@ -35,7 +35,6 @@
 }
 
 * {
-  color: #1900ff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -201,6 +200,14 @@ nav.open ~ .overlay {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.cards span{
+  color: #F8F4E1;
+}
+
+.card--value{
+  color: #F8F4E1;
 }
 
 .card {

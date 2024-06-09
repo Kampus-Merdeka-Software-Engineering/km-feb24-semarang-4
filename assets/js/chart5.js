@@ -18,18 +18,27 @@ let currentData5 = allTimeCurrentData5;
 
 const ctx = document.getElementById("paymentMethodPieChart").getContext("2d");
 
-// Fungsi untuk mendapatkan warna acak
-function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+// Fungsi untuk mendapatkan warna biru secara berurutan
+function getBlueShades() {
+  const blueShades = [
+    '#050C9C', '#A7E6FF'
+  ];
+
+  let currentIndex = 0;
+
+  return function() {
+    if (currentIndex >= blueShades.length) {
+      currentIndex = 0;
+    }
+    return blueShades[currentIndex++];
   }
-  return color;
 }
 
-// Membuat array warna untuk setiap mesin
-const backgroundColors = allTimeData5.map(() => getRandomColor());
+// Inisialisasi fungsi untuk mendapatkan warna berikutnya
+const getNextBlueShade = getBlueShades();
+
+// Membuat array warna untuk setiap metode pembayaran
+const backgroundColors = allTimeData5.map(() => getNextBlueShade());
 
 let pieChart = new Chart(ctx, {
   type: "pie",

@@ -18,18 +18,27 @@ let currentData6 = allTimeCurrentData6;
 
 const ctx = document.getElementById("piechart").getContext("2d");
 
-// Fungsi untuk mendapatkan warna acak
-function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+// Fungsi untuk mendapatkan warna biru secara berurutan
+function getBlueShades() {
+  const blueShades = [
+    '#050C9C', '#3572EF', '#3ABEF9', '#A7E6FF'
+  ];
+
+  let currentIndex = 0;
+
+  return function() {
+    if (currentIndex >= blueShades.length) {
+      currentIndex = 0;
+    }
+    return blueShades[currentIndex++];
   }
-  return color;
 }
 
+// Inisialisasi fungsi untuk mendapatkan warna berikutnya
+const getNextBlueShade = getBlueShades();
+
 // Membuat array warna untuk setiap mesin
-const backgroundColors = allTimeData6.map(() => getRandomColor());
+const backgroundColors = allTimeData6.map(() => getNextBlueShade());
 
 let pieChart = new Chart(ctx, {
   type: "pie",

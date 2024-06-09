@@ -31,6 +31,23 @@
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <style>
+    /* CSS untuk tombol DataTables "Next" dan "Previous" */
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+      background-color: #f0f0f0 !important; /* Warna background agak terang */
+      color: #000 !important; /* Warna teks */
+      border: 1px solid #ddd !important; /* Border */
+      padding: 5px 10px; /* Padding */
+      margin: 2px; /* Margin */
+      cursor: pointer; /* Pointer cursor */
+    }
+  
+    /* CSS untuk tombol yang sedang aktif */
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+      background-color: #e0e0e0 !important; /* Warna background untuk tombol aktif */
+      color: #000 !important; /* Warna teks untuk tombol aktif */
+    }
+  </style>
 </head>
 
 

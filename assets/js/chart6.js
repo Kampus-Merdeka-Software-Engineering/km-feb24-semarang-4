@@ -26,8 +26,8 @@ let barChart = new Chart(ctx, {
       {
         label: 'Total Sales',
         data: currentData.map(item => item.total_sales),
-        backgroundColor: "yellow",
-        borderColor: "black",
+        backgroundColor: "rgb(5, 12, 156, 0.2)",
+        borderColor: "rgb(53, 114, 239)",
         borderWidth: 1.5
       }
     ]

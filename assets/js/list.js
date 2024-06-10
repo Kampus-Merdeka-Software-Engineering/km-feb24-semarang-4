@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Menambahkan data produk ke dalam baris
         row.innerHTML = `
         <td>${item.Status}</td>
-        <td>${item.Device_ID}</td>
         <td>${item.Location}</td>
         <td>${item.Machine}</td>
         <td>${item.Product}</td>
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${item.Transaction}</td>
         <td>${item.TransDate}</td>
         <td>${item.Type}</td>
-        <td>${item.Prcd_Date}</td>
         `;
 
         // Menambahkan baris ke dalam tabel
@@ -31,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       // Menginisialisasi DataTables pada tabel produk
-      $("#product-table").DataTable();
+      $("#product-table").DataTable({
+        responsive: true
+      });
     });
 });

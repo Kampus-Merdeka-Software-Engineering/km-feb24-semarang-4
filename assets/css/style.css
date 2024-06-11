@@ -43,7 +43,7 @@
 
 body {
   min-height: 100%;
-  background-color: #1E202F;
+  background-color: #1e202f;
 }
 
 nav {
@@ -72,7 +72,7 @@ nav .logo {
 }
 
 .logo .logo-name {
-  color: #c0ff00;
+  color: yellow;
   font-size: 22px;
   font-weight: 500;
 }
@@ -202,12 +202,12 @@ nav.open ~ .overlay {
   gap: 1rem;
 }
 
-.cards span{
-  color: #F8F4E1;
+.cards span {
+  color: #f8f4e1;
 }
 
-.card--value{
-  color: #F8F4E1;
+.card--value {
+  color: #f8f4e1;
 }
 
 .card {
@@ -252,7 +252,7 @@ nav.open ~ .overlay {
   padding: 0.5rem;
   border: none;
   border-radius: 4px;
-  background-color: #e1f010;
+  background-color: #f8f4e1;
   color: #000000;
 }
 
@@ -286,6 +286,8 @@ nav.open ~ .overlay {
 /* visualisasi baris 1 */
 /* CSS untuk membuat visualisasi data responsif */
 .cards2 {
+  border-radius: 25px;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -378,13 +380,14 @@ nav.open ~ .overlay {
 }
 
 .footer-item h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
 .footer-item p {
   line-height: 1.6;
+  font-size: 12px;
 }
 
 .footer-item ul {
@@ -394,6 +397,7 @@ nav.open ~ .overlay {
 
 .footer-item li {
   margin-bottom: 5px;
+  font-size: 12px;
 }
 
 .footer-item a {

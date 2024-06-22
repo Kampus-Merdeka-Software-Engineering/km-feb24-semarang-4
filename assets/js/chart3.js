@@ -1,5 +1,36 @@
-import PercentageSalesByMachine from "../Json/PercentageSalesByMachine.json" assert { type: "json" };
-import SalesByMachineSixMonth from "../Json/SalesByMachineSixMonth.json" assert { type: "json" };
+const PercentageSalesByMachine = [{
+  "Machine": "GuttenPlans x1367",
+  "Total_Sales": "6904.25"
+}, {
+  "Machine": "EB Public Library x1380",
+  "Total_Sales": "6347.75"
+}, {
+  "Machine": "Earle Asphalt x1371",
+  "Total_Sales": "1808.75"
+}, {
+  "Machine": "BSQ Mall x1364 - Zales",
+  "Total_Sales": "1731.75"
+}, {
+  "Machine": "BSQ Mall x1366 - ATT",
+  "Total_Sales": "1538.25"
+}]
+
+const SalesByMachineSixMonth = [{
+  "Machine": "GuttenPlans x1367",
+  "Total_Sales": "3121.25"
+}, {
+  "Machine": "EB Public Library x1380",
+  "Total_Sales": "2181.0"
+}, {
+  "Machine": "BSQ Mall x1364 - Zales",
+  "Total_Sales": "932.25"
+}, {
+  "Machine": "Earle Asphalt x1371",
+  "Total_Sales": "866.5"
+}, {
+  "Machine": "BSQ Mall x1366 - ATT",
+  "Total_Sales": "832.0"
+}]
 
 const allTimeData4 = PercentageSalesByMachine.map((item) => ({
   Machine: item.Machine,

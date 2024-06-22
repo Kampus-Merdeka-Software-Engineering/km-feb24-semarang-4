@@ -1,5 +1,24 @@
-import PercentageSalesByCategory from "../Json/PercentageSalesByCategory.json" assert { type: "json" };
-import PercentageSalesSixMonth from "../Json/SixMonthPie.json" assert { type: "json" };
+const PercentageSalesByCategory = [{
+  "Category": "Food",
+  "Total_Sales": "9376.75"
+}, {
+  "Category": "Carbonated",
+  "Total_Sales": "5051.25"
+}, {
+  "Category": "Non Carbonated",
+  "Total_Sales": "2681.5"
+}, {
+  "Category": "Water",
+  "Total_Sales": "1221.25"
+}]
+
+const PercentageSalesSixMonth = [{
+  "type": "Cash",
+  "Total_Sales": "5121.5"
+}, {
+  "type": "Credit",
+  "Total_Sales": "2811.5"
+}]
 
 const allTimeData6 = PercentageSalesByCategory.map((item) => ({
   Category: item.Category,

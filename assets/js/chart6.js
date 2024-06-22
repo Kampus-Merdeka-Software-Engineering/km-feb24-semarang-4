@@ -1,5 +1,66 @@
-import SixMonthProduct from "../Json/SixMonthProduct.json" assert { type: "json" };
-import TopProduct from "../Json/TopProduct.json" assert { type: "json" };
+const SixMonthProduct = [{
+  "Product": "Monster Energy Original",
+  "total_sales": "772.0"
+}, {
+  "Product": "Coca Cola - Zero Sugar",
+  "total_sales": "560.0"
+}, {
+  "Product": "Red Bull - Original",
+  "total_sales": "374.5"
+}, {
+  "Product": "KitKat - Crisp Wafers",
+  "total_sales": "346.5"
+}, {
+  "Product": "Poland Springs Water",
+  "total_sales": "343.5"
+}, {
+  "Product": "Snapple Diet Tea - Lemon",
+  "total_sales": "220.0"
+}, {
+  "Product": "Snapple Diet Tea - Peach Tea",
+  "total_sales": "197.5"
+}, {
+  "Product": "Wonderful Pistachios - Variety",
+  "total_sales": "180.0"
+}, {
+  "Product": "Robert Irvine\u0027s - Fit Crunch -  Chocolate Pea",
+  "total_sales": "176.0"
+}, {
+  "Product": "Sunkist Soda - Orange",
+  "total_sales": "176.0"
+}]
+
+const TopProduct = [{
+  "Product": "Monster Energy Original",
+  "total_sales": "1552.0"
+}, {
+  "Product": "Coca Cola - Zero Sugar",
+  "total_sales": "987.0"
+}, {
+  "Product": "Red Bull - Original",
+  "total_sales": "812.0"
+}, {
+  "Product": "Poland Springs Water",
+  "total_sales": "702.5"
+}, {
+  "Product": "KitKat - Crisp Wafers",
+  "total_sales": "590.5"
+}, {
+  "Product": "Coca Cola - Regular",
+  "total_sales": "550.5"
+}, {
+  "Product": "Starbucks Doubleshot Energy - Mocha",
+  "total_sales": "470.5"
+}, {
+  "Product": "Wonderful Pistachios - Variety",
+  "total_sales": "392.0"
+}, {
+  "Product": "Sunkist Soda - Orange",
+  "total_sales": "381.5"
+}, {
+  "Product": "SunChips Multigrain - Harvest Cheddar",
+  "total_sales": "352.5"
+}]
 
 const allTimeData = TopProduct.map((item) => ({
   Product: item.Product,

@@ -1,5 +1,18 @@
-import PaymentMethodPercentage from "../Json/PaymentMethodPercentage.json" assert { type: "json" };
-import PaymentMethodSixMonth from "../Json/PaymentMethodSixMonth.json" assert { type: "json" };
+const PaymentMethodPercentage = [{
+  "type": "Cash",
+  "Total_Sales": "11377.5"
+}, {
+  "type": "Credit",
+  "Total_Sales": "6953.25"
+}]
+
+const PaymentMethodSixMonth = [{
+  "type": "Cash",
+  "Total_Sales": "5121.5"
+}, {
+  "type": "Credit",
+  "Total_Sales": "2811.5"
+}]
 
 const allTimeData5 = PaymentMethodPercentage.map((item) => ({
   type: item.type,

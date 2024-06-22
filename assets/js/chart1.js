@@ -1,5 +1,30 @@
-import Sales6month from "../Json/Sales6month.json" assert { type: "json" };
-import TotalSalesByLocation from "../Json/TotalSalesByLocation.json" assert { type: "json" };
+const Sales6month = [{
+  "location": "EB Public Library",
+  "Total_Sales": "2181.0"
+}, {
+  "location": "Brunswick Sq Mall",
+  "Total_Sales": "1764.25"
+}, {
+  "location": "Earle Asphalt",
+  "Total_Sales": "866.5"
+}, {
+  "location": "GuttenPlans",
+  "Total_Sales": "3121.25"
+}]
+
+const TotalSalesByLocation = [{
+  "location": "EB Public Library",
+  "total_sales": "6347.75"
+}, {
+  "location": "Brunswick Sq Mall",
+  "total_sales": "3270.0"
+}, {
+  "location": "Earle Asphalt",
+  "total_sales": "1808.75"
+}, {
+  "location": "GuttenPlans",
+  "total_sales": "6904.25"
+}]
 
 const allTimeData = TotalSalesByLocation.map((item) => ({
   location: item.location,

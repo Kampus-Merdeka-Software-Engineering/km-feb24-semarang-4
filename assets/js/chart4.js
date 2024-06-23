@@ -1,8 +1,5 @@
+// Mengimpor data dari file JSON
 const SalesPerMonth = [{
-  "Location": "Brunswick Sq Mall",
-  "Bulan": "1",
-  "Total_Sales": "247.75"
-}, {
   "Location": "GuttenPlans",
   "Bulan": "1",
   "Total_Sales": "462.75"
@@ -12,8 +9,8 @@ const SalesPerMonth = [{
   "Total_Sales": "173.0"
 }, {
   "Location": "Brunswick Sq Mall",
-  "Bulan": "2",
-  "Total_Sales": "279.25"
+  "Bulan": "1",
+  "Total_Sales": "247.75"
 }, {
   "Location": "GuttenPlans",
   "Bulan": "2",
@@ -23,21 +20,33 @@ const SalesPerMonth = [{
   "Bulan": "2",
   "Total_Sales": "184.5"
 }, {
-  "Location": "EB Public Library",
+  "Location": "Brunswick Sq Mall",
+  "Bulan": "2",
+  "Total_Sales": "279.25"
+}, {
+  "Location": "GuttenPlans",
   "Bulan": "3",
-  "Total_Sales": "244.25"
+  "Total_Sales": "455.0"
+}, {
+  "Location": "Earle Asphalt",
+  "Bulan": "3",
+  "Total_Sales": "161.5"
 }, {
   "Location": "Brunswick Sq Mall",
   "Bulan": "3",
   "Total_Sales": "262.75"
 }, {
-  "Location": "GuttenPlans",
+  "Location": "EB Public Library",
   "Bulan": "3",
-  "Total_Sales": "466.5"
+  "Total_Sales": "238.25"
+}, {
+  "Location": "GuttenPlans",
+  "Bulan": "4",
+  "Total_Sales": "650.5"
 }, {
   "Location": "Earle Asphalt",
-  "Bulan": "3",
-  "Total_Sales": "161.5"
+  "Bulan": "4",
+  "Total_Sales": "117.0"
 }, {
   "Location": "Brunswick Sq Mall",
   "Bulan": "4",
@@ -48,12 +57,12 @@ const SalesPerMonth = [{
   "Total_Sales": "601.75"
 }, {
   "Location": "GuttenPlans",
-  "Bulan": "4",
-  "Total_Sales": "653.5"
+  "Bulan": "5",
+  "Total_Sales": "506.0"
 }, {
   "Location": "Earle Asphalt",
-  "Bulan": "4",
-  "Total_Sales": "117.0"
+  "Bulan": "5",
+  "Total_Sales": "109.75"
 }, {
   "Location": "Brunswick Sq Mall",
   "Bulan": "5",
@@ -61,128 +70,120 @@ const SalesPerMonth = [{
 }, {
   "Location": "EB Public Library",
   "Bulan": "5",
-  "Total_Sales": "691.25"
-}, {
-  "Location": "GuttenPlans",
-  "Bulan": "5",
-  "Total_Sales": "516.5"
-}, {
-  "Location": "Earle Asphalt",
-  "Bulan": "5",
-  "Total_Sales": "109.75"
-}, {
-  "Location": "Brunswick Sq Mall",
-  "Bulan": "6",
-  "Total_Sales": "423.75"
-}, {
-  "Location": "EB Public Library",
-  "Bulan": "6",
-  "Total_Sales": "855.75"
+  "Total_Sales": "635.25"
 }, {
   "Location": "GuttenPlans",
   "Bulan": "6",
-  "Total_Sales": "624.5"
+  "Total_Sales": "602.0"
 }, {
   "Location": "Earle Asphalt",
   "Bulan": "6",
   "Total_Sales": "120.75"
 }, {
   "Location": "Brunswick Sq Mall",
-  "Bulan": "7",
-  "Total_Sales": "441.0"
+  "Bulan": "6",
+  "Total_Sales": "386.25"
 }, {
   "Location": "EB Public Library",
-  "Bulan": "7",
-  "Total_Sales": "800.5"
+  "Bulan": "6",
+  "Total_Sales": "705.75"
 }, {
   "Location": "GuttenPlans",
   "Bulan": "7",
-  "Total_Sales": "915.5"
+  "Total_Sales": "906.5"
 }, {
   "Location": "Earle Asphalt",
   "Bulan": "7",
   "Total_Sales": "123.75"
 }, {
   "Location": "Brunswick Sq Mall",
-  "Bulan": "8",
-  "Total_Sales": "296.25"
+  "Bulan": "7",
+  "Total_Sales": "373.5"
 }, {
   "Location": "EB Public Library",
+  "Bulan": "7",
+  "Total_Sales": "722.5"
+}, {
+  "Location": "GuttenPlans",
   "Bulan": "8",
-  "Total_Sales": "796.25"
+  "Total_Sales": "795.5"
 }, {
   "Location": "Earle Asphalt",
   "Bulan": "8",
   "Total_Sales": "211.25"
 }, {
-  "Location": "GuttenPlans",
-  "Bulan": "8",
-  "Total_Sales": "806.0"
-}, {
   "Location": "Brunswick Sq Mall",
-  "Bulan": "9",
-  "Total_Sales": "204.5"
+  "Bulan": "8",
+  "Total_Sales": "282.25"
 }, {
   "Location": "EB Public Library",
+  "Bulan": "8",
+  "Total_Sales": "752.25"
+}, {
+  "Location": "GuttenPlans",
   "Bulan": "9",
-  "Total_Sales": "766.5"
+  "Total_Sales": "588.5"
 }, {
   "Location": "Earle Asphalt",
   "Bulan": "9",
   "Total_Sales": "188.0"
 }, {
-  "Location": "GuttenPlans",
-  "Bulan": "9",
-  "Total_Sales": "594.5"
-}, {
   "Location": "Brunswick Sq Mall",
-  "Bulan": "10",
-  "Total_Sales": "233.75"
+  "Bulan": "9",
+  "Total_Sales": "192.0"
 }, {
   "Location": "EB Public Library",
+  "Bulan": "9",
+  "Total_Sales": "710.5"
+}, {
+  "Location": "GuttenPlans",
   "Bulan": "10",
-  "Total_Sales": "799.25"
+  "Total_Sales": "514.0"
 }, {
   "Location": "Earle Asphalt",
   "Bulan": "10",
   "Total_Sales": "138.25"
 }, {
-  "Location": "GuttenPlans",
+  "Location": "Brunswick Sq Mall",
   "Bulan": "10",
-  "Total_Sales": "521.5"
-}, {
-  "Location": "Brunswick Sq Mall",
-  "Bulan": "11",
-  "Total_Sales": "217.25"
-}, {
-  "Location": "Earle Asphalt",
-  "Bulan": "11",
-  "Total_Sales": "179.5"
+  "Total_Sales": "228.75"
 }, {
   "Location": "EB Public Library",
-  "Bulan": "11",
-  "Total_Sales": "651.5"
+  "Bulan": "10",
+  "Total_Sales": "771.25"
 }, {
   "Location": "GuttenPlans",
   "Bulan": "11",
-  "Total_Sales": "576.5"
-}, {
-  "Location": "Brunswick Sq Mall",
-  "Bulan": "12",
-  "Total_Sales": "233.5"
-}, {
-  "Location": "EB Public Library",
-  "Bulan": "12",
-  "Total_Sales": "626.75"
+  "Total_Sales": "555.5"
 }, {
   "Location": "Earle Asphalt",
-  "Bulan": "12",
-  "Total_Sales": "120.0"
+  "Bulan": "11",
+  "Total_Sales": "165.5"
+}, {
+  "Location": "Brunswick Sq Mall",
+  "Bulan": "11",
+  "Total_Sales": "203.75"
+}, {
+  "Location": "EB Public Library",
+  "Bulan": "11",
+  "Total_Sales": "607.5"
 }, {
   "Location": "GuttenPlans",
   "Bulan": "12",
   "Total_Sales": "423.0"
-}]
+}, {
+  "Location": "Earle Asphalt",
+  "Bulan": "12",
+  "Total_Sales": "115.5"
+}, {
+  "Location": "Brunswick Sq Mall",
+  "Bulan": "12",
+  "Total_Sales": "225.5"
+}, {
+  "Location": "EB Public Library",
+  "Bulan": "12",
+  "Total_Sales": "602.75"
+}];
 
 const monthNames = [
   "Januari",
